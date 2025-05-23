@@ -104,7 +104,7 @@ static void shuffle(const Data d)
 {
     for(int a = 0; a < d.rows; a++)
     {
-        const int b = rand() % d.rows;
+        const int b = a + rand() % (d.rows - a);
         float* ot = d.tg[a];
         float* it = d.in[a];
         // Swap output.
